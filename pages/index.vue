@@ -2,11 +2,7 @@
   <div
     class="mx-auto container p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-6"
   >
-    <div
-      v-for="(snippet, i) in snippets"
-      :key="i"
-      class="rounded-lg border-red-900 border-2"
-    >
+    <div v-for="(snippet, i) in snippets" :key="i" class="">
       <nuxt-link :to="`/snippets/${snippet.slug}`">
         <SnippetCard :snippet="snippet" />
       </nuxt-link>
@@ -38,7 +34,7 @@ export default {
     return { snippets }
   },
   created() {
-    console.log(this.$route)
+    // console.log(this.$route)
   },
 }
 </script>
